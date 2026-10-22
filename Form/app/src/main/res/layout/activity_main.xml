@@ -14,7 +14,6 @@
         android:layout_height="wrap_content"
         android:padding="20dp">
 
-        <!-- Khung bo tròn viền xanh dương -->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -41,7 +40,6 @@
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
-                <!-- Họ và tên -->
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilName"
                     style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
@@ -68,12 +66,11 @@
                         android:id="@+id/edtName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="textPersonName"
+                        android:inputType="textPersonName|textCapWords"
                         android:maxLines="1"
                         android:textColor="#FFFFFF" />
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <!-- Email -->
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilEmail"
                     style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
@@ -105,47 +102,12 @@
                         android:textColor="#FFFFFF" />
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <!-- Mật khẩu -->
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/tilPassword"
-                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:hint="Mật khẩu"
-                    android:textColorHint="#9FB3E8"
-                    app:boxBackgroundColor="#17265E"
-                    app:boxCornerRadiusBottomEnd="6dp"
-                    app:boxCornerRadiusBottomStart="6dp"
-                    app:boxCornerRadiusTopEnd="6dp"
-                    app:boxCornerRadiusTopStart="6dp"
-                    app:boxStrokeColor="#22C55E"
-                    app:boxStrokeErrorColor="#EF2B3A"
-                    app:boxStrokeWidth="2dp"
-                    app:boxStrokeWidthFocused="2dp"
-                    app:endIconMode="password_toggle"
-                    app:endIconTint="#9FB3E8"
-                    app:errorEnabled="true"
-                    app:errorIconDrawable="@null"
-                    app:errorTextColor="#FF4D5A"
-                    app:hintTextColor="#9FB3E8">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edtPassword"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textPassword"
-                        android:maxLines="1"
-                        android:textColor="#FFFFFF" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <!-- Số điện thoại -->
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tilPhone"
                     style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
+                    android:layout_marginBottom="8dp"
                     android:hint="Số điện thoại"
                     android:textColorHint="#9FB3E8"
                     app:boxBackgroundColor="#17265E"
@@ -167,12 +129,76 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="phone"
-                        android:maxLength="12"
                         android:maxLines="1"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="#FFFFFF"
+                        android:maxLength="12" />
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <!-- Nút đăng ký -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilMsv"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:hint="Mã sinh viên (MSV)"
+                    android:textColorHint="#9FB3E8"
+                    app:boxBackgroundColor="#17265E"
+                    app:boxCornerRadiusBottomEnd="6dp"
+                    app:boxCornerRadiusBottomStart="6dp"
+                    app:boxCornerRadiusTopEnd="6dp"
+                    app:boxCornerRadiusTopStart="6dp"
+                    app:boxStrokeColor="#22C55E"
+                    app:boxStrokeErrorColor="#EF2B3A"
+                    app:boxStrokeWidth="2dp"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:errorEnabled="true"
+                    app:errorIconDrawable="@null"
+                    app:errorTextColor="#FF4D5A"
+                    app:hintTextColor="#9FB3E8">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtMsv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapCharacters"
+                        android:maxLines="1"
+                        android:textColor="#FFFFFF"
+                        android:maxLength="12" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilClass"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:hint="Lớp"
+                    android:textColorHint="#9FB3E8"
+                    app:boxBackgroundColor="#17265E"
+                    app:boxCornerRadiusBottomEnd="6dp"
+                    app:boxCornerRadiusBottomStart="6dp"
+                    app:boxCornerRadiusTopEnd="6dp"
+                    app:boxCornerRadiusTopStart="6dp"
+                    app:boxStrokeColor="#22C55E"
+                    app:boxStrokeErrorColor="#EF2B3A"
+                    app:boxStrokeWidth="2dp"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:errorEnabled="true"
+                    app:errorIconDrawable="@null"
+                    app:errorTextColor="#FF4D5A"
+                    app:hintTextColor="#9FB3E8">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtClass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapCharacters"
+                        android:maxLines="1"
+                        android:textColor="#FFFFFF"
+                        android:maxLength="20" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Nút Đăng ký: validate -> sang màn hình Chi tiết -->
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnRegister"
                     android:layout_width="match_parent"
@@ -183,6 +209,21 @@
                     android:textStyle="bold"
                     app:backgroundTint="#22C55E"
                     app:cornerRadius="8dp" />
+
+                <!-- Nút chuyển thẳng sang màn hình Chi tiết -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnGoDetail"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="12dp"
+                    android:text="XEM CHI TIẾT"
+                    android:textColor="#22C55E"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="8dp"
+                    app:strokeColor="#22C55E"
+                    app:strokeWidth="2dp" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
     </FrameLayout>
