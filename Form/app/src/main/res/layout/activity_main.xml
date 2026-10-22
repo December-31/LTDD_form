@@ -197,20 +197,6 @@
                         android:textColor="#FFFFFF"
                         android:maxLength="20" />
                 </com.google.android.material.textfield.TextInputLayout>
-
-                <!-- Nút Đăng ký: validate -> sang màn hình Chi tiết -->
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnRegister"
-                    android:layout_width="match_parent"
-                    android:layout_height="56dp"
-                    android:text="ĐĂNG KÝ NGAY"
-                    android:textColor="#0A1233"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    app:backgroundTint="#22C55E"
-                    app:cornerRadius="8dp" />
-
-                <!-- Nút chuyển thẳng sang màn hình Chi tiết -->
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnGoDetail"
                     style="@style/Widget.Material3.Button.OutlinedButton"
@@ -224,6 +210,18 @@
                     app:cornerRadius="8dp"
                     app:strokeColor="#22C55E"
                     app:strokeWidth="2dp" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="ĐĂNG KÝ NGAY"
+                    android:textColor="#0A1233"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#22C55E"
+                    app:cornerRadius="8dp" />
+
+
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
     </FrameLayout>
