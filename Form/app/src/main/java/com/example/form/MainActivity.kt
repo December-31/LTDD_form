@@ -78,6 +78,24 @@ class MainActivity : AppCompatActivity() {
     }
 
     // ===== Các luật validate: trả về null nếu hợp lệ, ngược lại trả về thông báo lỗi =====
+    private fun validateMsv() = check(tilMsv, edtMsv) { s ->
+        when {
+            s.isEmpty() -> "MSV không được để trống"
+            // MSV: chữ + số, dài 6-12 ký tự (sửa regex nếu trường bạn quy định khác)
+            !s.matches(Regex("^[A-Za-z0-9]{6,12}$")) -> "MSV gồm 6-12 ký tự chữ/số, không dấu cách"
+            else -> null
+        }
+    }
+
+    private fun validateClass() = check(tilClass, edtClass) { s ->
+        when {
+            s.isEmpty() -> "Lớp không được để trống"
+            // Ví dụ hợp lệ: CNTT1-K65, D21CQCN01-B
+            !s.matches(Regex("^[A-Za-z0-9][A-Za-z0-9._-]{1,19}$")) ->
+                "Lớp không hợp lệ (vd: CNTT1-K65)"
+            else -> null
+        }
+    }
     private fun validateName() = check(tilName, edtName) { s ->
         when {
             s.isEmpty() -> "Họ tên không được để trống"
@@ -104,24 +122,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun validateMsv() = check(tilMsv, edtMsv) { s ->
-        when {
-            s.isEmpty() -> "MSV không được để trống"
-            // MSV: chữ + số, dài 6-12 ký tự (sửa regex nếu trường bạn quy định khác)
-            !s.matches(Regex("^[A-Za-z0-9]{6,12}$")) -> "MSV gồm 6-12 ký tự chữ/số, không dấu cách"
-            else -> null
-        }
-    }
-
-    private fun validateClass() = check(tilClass, edtClass) { s ->
-        when {
-            s.isEmpty() -> "Lớp không được để trống"
-            // Ví dụ hợp lệ: CNTT1-K65, D21CQCN01-B
-            !s.matches(Regex("^[A-Za-z0-9][A-Za-z0-9._-]{1,19}$")) ->
-                "Lớp không hợp lệ (vd: CNTT1-K65)"
-            else -> null
-        }
-    }
 
     /** Chạy luật, gán/xóa lỗi trên TextInputLayout, trả về true nếu hợp lệ. */
     private fun check(
